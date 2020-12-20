@@ -1,5 +1,5 @@
-import Hapi from "@hapi/hapi"
-import Deck from "@hyprtxt/deck"
+const Hapi = require("@hapi/hapi")
+const Deck = require("@hyprtxt/deck").default
 
 const init = async () => {
   const server = Hapi.server({
@@ -9,6 +9,13 @@ const init = async () => {
   server.route({
     method: "GET",
     path: "/",
+    handler: (request, h) => {
+      return Deck.getNewCards()
+    },
+  })
+  server.route({
+    method: "GET",
+    path: "/poker",
     handler: (request, h) => {
       return Deck.getNewCards()
     },
