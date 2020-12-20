@@ -5,12 +5,17 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "develop": "echo \"Hello\"",
+    "develop": "./node_modules/nodemon/bin/nodemon.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Taylor Young <tdy721@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "@hapi/hapi": "^20.0.3"
+    "@hapi/hapi": "^20.0.3",
+    "@hyprtxt/deck": "^1.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6",
+    "prettier": "^2.2.1"
   }
 }
