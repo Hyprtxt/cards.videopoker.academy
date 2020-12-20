@@ -12,7 +12,7 @@
   "license": "MIT",
   "dependencies": {
     "@hapi/hapi": "^20.0.3",
-    "@hyprtxt/deck": "^1.0.0"
+    "@hyprtxt/deck": "^1.1.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.6",

@@ -252,10 +252,10 @@
     "@hapi/bourne" "2.x.x"
     "@hapi/hoek" "9.x.x"
 
-"@hyprtxt/deck@^1.0.0":
-  version "1.0.0"
-  resolved "https://npm.pkg.github.com/download/@hyprtxt/deck/1.0.0/90bb66b8aeb6e5ac6b586b4ed32dddce887a28f2a0b7f82ba3aec2b6107f725f#976d9949ddac6a6ccf6ea3601c655ab979b2f701"
-  integrity sha512-CDodLcjjLiBf4aB8EeYoBWjvICkr3nl3HJNXjgi/lVXHO8MFC0nzgXq2Angh0P9x+0lwcIyUj55XyZQeiI45Ig==
+"@hyprtxt/deck@^1.1.0":
+  version "1.1.0"
+  resolved "https://npm.pkg.github.com/download/@hyprtxt/deck/1.1.0/b74c1a17edb49a1501ec46a25993d7c69dcc839ca191503292618463ad59e1e4#a1e137ec958bcf11c59106948cbc6282270359dd"
+  integrity sha512-eP/ZbR8BpkbWcGTj8af92GqR1Qlpn9KjYXhYalMzo2/c2JPGohuNloUe7mKvpI+FpL42QMQwiPRh5WqqOdF8zw==
 
 "@sindresorhus/is@^0.14.0":
   version "0.14.0"

@@ -1,4 +1,5 @@
-const Hapi = require("@hapi/hapi")
+import Hapi from "@hapi/hapi"
+import Deck from "@hyprtxt/deck"
 
 const init = async () => {
   const server = Hapi.server({
@@ -9,7 +10,7 @@ const init = async () => {
     method: "GET",
     path: "/",
     handler: (request, h) => {
-      return "Hello World!"
+      return Deck.getNewCards()
     },
   })
   await server.start()
