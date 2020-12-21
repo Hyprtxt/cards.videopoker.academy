@@ -1,7 +1,9 @@
 const Hapi = require("@hapi/hapi")
 const Joi = require("joi")
-const Deck = require("@hyprtxt/deck")
-const Poker = require("@hyprtxt/poker")
+const Deck = require("@hyprtxt/deck").default
+const Poker = require("@hyprtxt/poker").default
+
+console.log(Deck, Poker)
 
 const isCardJoi = (value, helpers) => {
   if (!Deck.isCard(value)) {
@@ -35,7 +37,7 @@ const init = async () => {
     },
     handler: (request, h) => {
       const payload = request.payload
-      let reply = { ...Poker.Score(payload), hand: payload }
+      let reply = { ...Poker.score(payload), hand: payload }
       return reply
     },
   })
