@@ -12,9 +12,9 @@
   "license": "MIT",
   "dependencies": {
     "@hapi/hapi": "^20.0.3",
-    "@hapi/joi": "^17.1.1",
     "@hyprtxt/deck": "^2.0.1",
-    "@hyprtxt/poker": "^3.0.1"
+    "@hyprtxt/poker": "^3.0.1",
+    "joi": "^17.3.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.6",

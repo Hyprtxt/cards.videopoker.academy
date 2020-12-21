@@ -1,6 +1,6 @@
 const Hapi = require("@hapi/hapi")
-const Joi = require("@hapi/joi")
-const Deck = require("@hyprtxt/deck").default
+const Joi = require("joi")
+const Deck = require("@hyprtxt/deck")
 const Poker = require("@hyprtxt/poker")
 
 const isCardJoi = (value, helpers) => {
