@@ -12,8 +12,8 @@
   "license": "MIT",
   "dependencies": {
     "@hapi/hapi": "^20.0.3",
-    "@hyprtxt/deck": "^2.0.1",
-    "@hyprtxt/poker": "^3.0.2",
+    "@hyprtxt/deck": "^2.0.2",
+    "@hyprtxt/poker": "^3.0.4",
     "joi": "^17.3.0"
   },
   "devDependencies": {

@@ -3,15 +3,6 @@ const Joi = require("joi")
 const Deck = require("@hyprtxt/deck").default
 const Poker = require("@hyprtxt/poker").default
 
-console.log(Deck, Poker)
-
-const isCardJoi = (value, helpers) => {
-  if (!Deck.isCard(value)) {
-    return helpers.error("any.invalid")
-  }
-  return value
-}
-
 const init = async () => {
   const server = Hapi.server({
     port: 3000,
@@ -32,7 +23,17 @@ const init = async () => {
         payload: Joi.array()
           .unique()
           .length(5)
-          .items(Joi.string().length(2).custom(isCardJoi, "is card")),
+          .items(
+            Joi.string()
+              .length(2)
+              .custom((value, helpers) => {
+                // console.log("isCard", value, Deck.isCard(value))
+                if (!Deck.isCard(value)) {
+                  return helpers.error("any.invalid")
+                }
+                return value
+              }, "custom validation - Deck.isCard")
+          ),
       },
     },
     handler: (request, h) => {
