@@ -1,26 +1,7 @@
 const Hapi = require("@hapi/hapi")
 const Joi = require("@hapi/joi")
-let Deck = require("@hyprtxt/deck").default
+const Deck = require("@hyprtxt/deck").default
 const Poker = require("@hyprtxt/poker")
-
-Deck.isCard = maybe_card => {
-  // console.log(typeof maybe_card, maybe_card.length)
-  if (typeof maybe_card !== "string") {
-    return false
-  }
-  if (maybe_card.length !== 2) {
-    return false
-  }
-  const [suit, value] = maybe_card.split("")
-  // console.log(suit, value, Deck.suits.indexOf(suit), Deck.values.indexOf(value))
-  if (Deck.suits.indexOf(suit) === -1) {
-    return false
-  }
-  if (Deck.values.indexOf(value) === -1) {
-    return false
-  }
-  return true
-}
 
 const isCardJoi = (value, helpers) => {
   if (!Deck.isCard(value)) {
@@ -28,8 +9,6 @@ const isCardJoi = (value, helpers) => {
   }
   return value
 }
-
-console.log(Deck, Poker)
 
 const init = async () => {
   const server = Hapi.server({

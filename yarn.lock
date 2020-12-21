@@ -280,17 +280,17 @@
     "@hapi/bourne" "2.x.x"
     "@hapi/hoek" "9.x.x"
 
-"@hyprtxt/deck@^2.0.0":
-  version "2.0.0"
-  resolved "https://npm.pkg.github.com/download/@hyprtxt/deck/2.0.0/848dd2da244561f015b44e0d6b411bb20dacaaf5023f4c86eea7f79c3139010f#db479eb739d2f99267189c74385b4be1a9eace55"
-  integrity sha512-6zjsH+jwM+4aq/0EUO3e8fq2O9UmpgkJ0oH9yjC0GLyVRAeJ6t7YFFrNEXkz6ErAeLHJZlZBWvCxIGDkie2N5g==
+"@hyprtxt/deck@^2.0.1":
+  version "2.0.1"
+  resolved "https://npm.pkg.github.com/download/@hyprtxt/deck/2.0.1/e515baf1cbbfcf2cb9103b9e780fd754bf044698b5f143d9de771aceab63f883#5f70dc2ba3d12c79ed3e6a9c488a758c767ecc0b"
+  integrity sha512-nHyIEJdlZzMsErR9QNwpu8bhk0PzEt6pcjse2FpZHRjKUkKIJtv7vH365pqK/Fgkcfdsj3k9Sp+WdBvUEnkP9A==
 
-"@hyprtxt/poker@^1.0.0":
-  version "1.0.0"
-  resolved "https://npm.pkg.github.com/download/@hyprtxt/poker/1.0.0/685cef037d94c6301684ad7db1b1cdb4078c6edf68687ca9ef992dff08d12d85#b8d8516056c110731578ba2140068ef9f8133282"
-  integrity sha512-OuPpdn/AX+AV0J2NFnEeh7ohJzPq8J4P4tr14mjZ+eaudkuMI3cG6Gj0RsXZlcJ3UEavURfJvsrISDaN4/CHGw==
+"@hyprtxt/poker@^3.0.1":
+  version "3.0.1"
+  resolved "https://npm.pkg.github.com/download/@hyprtxt/poker/3.0.1/ff12aedf3cb55efa6e246a6a3eb0cbb6bd528b6e2da6fe9cdec03c72ef06abbb#942f4a1327b164f210537ad85131280a3d6f56a2"
+  integrity sha512-VBYMFduP+QDzywglvvyb4mxIJXeM+vLJWtqGAJ0UX5KVceVOH2onrdNKMpfrv+w/tWDcLAR71YLBfRGp6YgCLw==
   dependencies:
-    "@hyprtxt/deck" "^2.0.0"
+    "@hyprtxt/deck" "^2.0.1"
 
 "@sindresorhus/is@^0.14.0":
   version "0.14.0"
