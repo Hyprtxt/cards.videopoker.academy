@@ -1,6 +1,7 @@
 const Hapi = require("@hapi/hapi")
+const Joi = require("@hapi/joi")
 let Deck = require("@hyprtxt/deck").default
-const Poker = require("@hyprtxt/poker").default
+const Poker = require("@hyprtxt/poker")
 
 Deck.isCard = maybe_card => {
   // console.log(typeof maybe_card, maybe_card.length)
@@ -21,7 +22,14 @@ Deck.isCard = maybe_card => {
   return true
 }
 
-console.log(Deck)
+const isCardJoi = (value, helpers) => {
+  if (!Deck.isCard(value)) {
+    return helpers.error("any.invalid")
+  }
+  return value
+}
+
+console.log(Deck, Poker)
 
 const init = async () => {
   const server = Hapi.server({
@@ -38,15 +46,17 @@ const init = async () => {
   server.route({
     method: "PUT",
     path: "/",
+    options: {
+      validate: {
+        payload: Joi.array()
+          .unique()
+          .length(5)
+          .items(Joi.string().length(2).custom(isCardJoi, "is card")),
+      },
+    },
     handler: (request, h) => {
       const payload = request.payload
-      let reply
-      if (typeof payload.map === "function") {
-        reply = payload.filter(card => {
-          console.log(Deck.isCard(card))
-          return Deck.isCard(card)
-        })
-      }
+      let reply = { ...Poker.Score(payload), hand: payload }
       return reply
     },
   })
