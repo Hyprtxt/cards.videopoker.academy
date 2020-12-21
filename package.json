@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "develop": "./node_modules/nodemon/bin/nodemon.js",
+    "develop": "nodemon",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Taylor Young <tdy721@gmail.com>",
